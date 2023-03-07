@@ -22,6 +22,5 @@ func (c Course) PrintClasses() {
 }
 //Cambia la propiedad Price de un struct Course
 func (c Course) ChangePrice() {
-	Course.Price = 12.50
-	
+	c.Price = 12.50
 }
