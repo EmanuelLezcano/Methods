@@ -9,7 +9,9 @@ type Course struct {
 	UserIDs []uint
 	Classes map[uint]string
 }
-
+func PrintText(){
+	fmt.Println("Hi methods.")
+}
 //Method of struct Course
 func (c Course) PrintClasses() {
 	text := "Las clases son: "
