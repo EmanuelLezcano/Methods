@@ -20,3 +20,8 @@ func (c Course) PrintClasses() {
 	}
 	fmt.Println(text)
 }
+//Cambia la propiedad Price de un struct Course
+func (c Course) ChangePrice() {
+	Course.Price = 12.50
+	
+}
