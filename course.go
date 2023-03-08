@@ -1,13 +1,7 @@
 package methods
 
 import "fmt"
-func NewCourse(name string, price float64, isFree bool) *course{
-	return &course{
-		Name: name,
-		Price: price,
-		IsFree: isFree,
-	}
-}
+
 
 type course struct {
 	name    string
@@ -15,6 +9,13 @@ type course struct {
 	isFree  bool
 	userIDs []uint
 	classes map[uint]string
+}
+func NewCourse(name string, price float64, isFree bool) *course{
+	return &course{
+		Name: name,
+		Price: price,
+		IsFree: isFree,
+	}
 }
 func printText(){
 	fmt.Println("Hi methods.")
