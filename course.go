@@ -4,20 +4,41 @@ import "fmt"
 
 type course struct {
 	name    string
-	Price   float64
-	IsFree  bool
-	UserIDs []uint
+	price   float64
+	isFree  bool
+	userIDs []uint
 	classes map[uint]string
 }
 
-func (c *course) CourseSetClasses(classes map[uint]string) {
-	c.classes = classes
-}
 func (c *course) CourseSetName(name string) {
 	c.name = name
 }
 func (c *course) CourseName() string {
 	return c.name
+}
+func (c *course) CourseSetPrice(price float64) {
+	c.price = price
+}
+func (c *course) CoursePrice() float64 {
+	return c.price
+}
+func (c *course) CourseSetIsFree(isFree bool) {
+	c.isFree = isFree
+}
+func (c *course) CourseIsFree() bool {
+	return c.isFree
+}
+func (c *course) CourseSetUserIDs(userIDs []uint) {
+	c.userIDs = userIDs
+}
+func (c *course) CourseUserIDs() []uint {
+	return c.userIDs
+}
+func (c *course) CourseSetClasses(classes map[uint]string) {
+	c.classes = classes
+}
+func (c *course) CourseClasses() map[uint]string {
+	return c.classes
 }
 
 func NewCourse(name string, price float64, isFree bool) *course {
@@ -26,8 +47,8 @@ func NewCourse(name string, price float64, isFree bool) *course {
 	}
 	return &course{
 		name:   name,
-		Price:  price,
-		IsFree: isFree,
+		price:  price,
+		isFree: isFree,
 	}
 }
 func PrintText() {
@@ -41,9 +62,4 @@ func (c *course) PrintClasses() {
 		text += class + ", "
 	}
 	fmt.Println(text)
-}
-
-//Cambia la propiedad Price de un struct Course
-func (c *course) changePrice() {
-	c.Price = 12.50
 }
