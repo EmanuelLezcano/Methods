@@ -7,7 +7,11 @@ type course struct {
 	Price   float64
 	IsFree  bool
 	UserIDs []uint
-	Classes map[uint]string
+	classes map[uint]string
+}
+
+func (c *course) CourseSetClasses(classes map[uint]string) {
+	c.classes = classes
 }
 
 func NewCourse(name string, price float64, isFree bool) *course {
@@ -27,7 +31,7 @@ func PrintText() {
 //Method of struct Course
 func (c *course) PrintClasses() {
 	text := "Las clases son: "
-	for _, class := range c.Classes {
+	for _, class := range c.classes {
 		text += class + ", "
 	}
 	fmt.Println(text)
