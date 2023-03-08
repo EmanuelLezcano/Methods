@@ -1,19 +1,22 @@
 package methods
 
 import "fmt"
-
-type Course struct {
-	Name    string
-	Price   float64
-	IsFree  bool
-	UserIDs []uint
-	Classes map[uint]string
+func NewCourse(name string, price float64, isFree bool) *course{
+	
 }
-func PrintText(){
+
+type course struct {
+	came    string
+	price   float64
+	isFree  bool
+	userIDs []uint
+	classes map[uint]string
+}
+func printText(){
 	fmt.Println("Hi methods.")
 }
 //Method of struct Course
-func (c *Course) PrintClasses() {
+func (c *Course) printClasses() {
 	text := "Las clases son: "
 	for _, class := range c.Classes {
 		text += class + ", "
@@ -21,6 +24,6 @@ func (c *Course) PrintClasses() {
 	fmt.Println(text)
 }
 //Cambia la propiedad Price de un struct Course
-func (c *Course) ChangePrice() {
+func (c *Course) changePrice() {
 	c.Price = 12.50
 }
