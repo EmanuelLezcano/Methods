@@ -2,7 +2,7 @@ package methods
 
 import "fmt"
 
-type Course struct {
+type course struct {
 	Name    string
 	Price   float64
 	IsFree  bool
@@ -10,8 +10,11 @@ type Course struct {
 	Classes map[uint]string
 }
 
-func NewCourse(name string, price float64, isFree bool) *Course {
-	return &Course{
+func NewCourse(name string, price float64, isFree bool) *course {
+	if price == 0 {
+		price = 30
+	}
+	return &course{
 		Name:   name,
 		Price:  price,
 		IsFree: isFree,
@@ -22,7 +25,7 @@ func PrintText() {
 }
 
 //Method of struct Course
-func (c *Course) PrintClasses() {
+func (c *course) PrintClasses() {
 	text := "Las clases son: "
 	for _, class := range c.Classes {
 		text += class + ", "
@@ -31,6 +34,6 @@ func (c *Course) PrintClasses() {
 }
 
 //Cambia la propiedad Price de un struct Course
-func (c *Course) changePrice() {
+func (c *course) changePrice() {
 	c.Price = 12.50
 }
