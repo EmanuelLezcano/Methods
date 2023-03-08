@@ -1,9 +1,7 @@
 package methods
 
-import "fmt"
-
 func main() {
-	Go := Course{
+	/* Go := Course{
 		Name:    "Emanuel",
 		Price:   15.34,
 		IsFree:  true,
@@ -13,7 +11,7 @@ func main() {
 			2: "Estructuras",
 			3: "Maps",
 		},
-	}
+	} */
 	/*
 		Es lo mismo que lo de arriba
 		NOTA: es obligatorio especificar los campos en el mismo orden que se declararon.
@@ -29,7 +27,7 @@ func main() {
 			},
 		}
 	*/
-	ObjVacio := Course{}
+	/* ObjVacio := Course{}
 	Incompleto := Course{
 		Name:   "Juan",
 		IsFree: false,
@@ -38,5 +36,5 @@ func main() {
 	fmt.Printf("%v\n", ObjVacio)
 	fmt.Printf("%v\n", Incompleto)
 
-	Go.PrintClasses()
+	Go.PrintClasses() */
 }
