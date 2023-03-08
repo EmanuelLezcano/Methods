@@ -10,13 +10,13 @@ type Course struct {
 	Classes map[uint]string
 }
 
-/* func NewCourse(name string, price float64, isFree bool) *Course {
+func NewCourse(name string, price float64, isFree bool) *Course {
 	return &Course{
 		Name:   name,
 		Price:  price,
 		IsFree: isFree,
 	}
-} */
+}
 func PrintText() {
 	fmt.Println("Hi methods.")
 }
