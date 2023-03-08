@@ -13,7 +13,7 @@ func PrintText(){
 	fmt.Println("Hi methods.")
 }
 //Method of struct Course
-func (c Course) PrintClasses() {
+func (c *Course) PrintClasses() {
 	text := "Las clases son: "
 	for _, class := range c.Classes {
 		text += class + ", "
@@ -21,6 +21,6 @@ func (c Course) PrintClasses() {
 	fmt.Println(text)
 }
 //Cambia la propiedad Price de un struct Course
-func (c Course) ChangePrice() {
+func (c *Course) ChangePrice() {
 	c.Price = 12.50
 }
