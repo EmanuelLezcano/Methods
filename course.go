@@ -3,7 +3,7 @@ package methods
 import "fmt"
 
 type course struct {
-	Name    string
+	name    string
 	Price   float64
 	IsFree  bool
 	UserIDs []uint
@@ -13,13 +13,19 @@ type course struct {
 func (c *course) CourseSetClasses(classes map[uint]string) {
 	c.classes = classes
 }
+func (c *course) CourseSetName(name string) {
+	c.name = name
+}
+func (c *course) CourseName() string {
+	return c.name
+}
 
 func NewCourse(name string, price float64, isFree bool) *course {
 	if price == 0 {
 		price = 30
 	}
 	return &course{
-		Name:   name,
+		name:   name,
 		Price:  price,
 		IsFree: isFree,
 	}
