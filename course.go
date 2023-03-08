@@ -4,11 +4,11 @@ import "fmt"
 
 
 type course struct {
-	name    string
-	price   float64
-	isFree  bool
-	userIDs []uint
-	classes map[uint]string
+	Name    string
+	Price   float64
+	IsFree  bool
+	UserIDs []uint
+	Classes map[uint]string
 }
 func NewCourse(name string, price float64, isFree bool) *course{
 	return &course{
