@@ -2,11 +2,15 @@ package methods
 
 import "fmt"
 func NewCourse(name string, price float64, isFree bool) *course{
-	
+	return &course{
+		Name: name,
+		Price: price,
+		IsFree: isFree,
+	}
 }
 
 type course struct {
-	came    string
+	name    string
 	price   float64
 	isFree  bool
 	userIDs []uint
